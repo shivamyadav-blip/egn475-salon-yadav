@@ -42,7 +42,7 @@ As a salon client, I want to book an appointment using my contact details and a 
 
 **Acceptance Criteria:**
 1. Given I have entered my name, contact information, service, and an available time, when I submit my booking, then the appointment is saved and the selected slot becomes unavailable.
-2. Given I leave a required field empty, when I submit my booking, then I see a clear validation message and no appointment is created.
+2. Given I leave a required field empty, when I submit my booking, then I see a message identifying each missing required field and no appointment is created.
 
 ### US-04: View Booking Confirmation
 **Priority:** Must Have
