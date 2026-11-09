@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Choose Date and Time | Nexa Salon</title>
+    <meta name="description" content="Choose an illustrative appointment date and time for a Nexa Salon haircut.">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    >
+  </head>
+  <body>
+    <header class="container">
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="services.html"><strong>Nexa Salon</strong></a></li>
+        </ul>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="appointments.html">My Appointments</a></li>
+          <li><a href="staff-calendar.html">Staff Calendar</a></li>
+          <li><a href="services-admin.html">Services Admin</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Choose Date and Time</h1>
+
+      <article aria-labelledby="selected-service-heading">
+        <header><h2 id="selected-service-heading">Selected service</h2></header>
+        <p><strong>Haircut</strong></p>
+        <p>$30 · 30 minutes</p>
+      </article>
+
+      <section aria-labelledby="appointment-time-heading">
+        <h2 id="appointment-time-heading">Appointment time</h2>
+        <label for="appointment-date">Appointment date</label>
+        <input
+          type="date"
+          id="appointment-date"
+          name="appointment-date"
+          aria-describedby="availability-note"
+        >
+        <small id="availability-note">
+          Sample times are for display only and do not change based on the selected date.
+        </small>
+
+        <fieldset>
+          <legend>Sample available time slots</legend>
+          <label><input type="radio" name="appointment-time" value="09:00"> 9:00 AM</label>
+          <label><input type="radio" name="appointment-time" value="10:30"> 10:30 AM</label>
+          <label><input type="radio" name="appointment-time" value="11:00" disabled> 11:00 AM (Booked)</label>
+          <label><input type="radio" name="appointment-time" value="13:00"> 1:00 PM</label>
+          <label><input type="radio" name="appointment-time" value="15:00"> 3:00 PM</label>
+        </fieldset>
+      </section>
+
+      <nav aria-label="Appointment steps">
+        <ul>
+          <li><a href="services.html">Back to Services</a></li>
+        </ul>
+        <ul>
+          <li><a href="confirm.html" role="button">Continue to Review</a></li>
+        </ul>
+      </nav>
+    </main>
+
+    <footer class="container">
+      <small>Nexa Salon - Appointment Booking Prototype</small>
+    </footer>
+  </body>
+</html>
