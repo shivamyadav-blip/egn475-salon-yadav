@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Appointments | Nexa Salon</title>
+    <meta name="description" content="View sample appointments in the Nexa Salon static booking demonstration.">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    >
+  </head>
+  <body>
+    <header class="container">
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="services.html"><strong>Nexa Salon</strong></a></li>
+        </ul>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="appointments.html" aria-current="page">My Appointments</a></li>
+          <li><a href="staff-calendar.html">Staff Calendar</a></li>
+          <li><a href="services-admin.html">Services Admin</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>My Appointments</h1>
+
+      <section aria-label="Sample appointments">
+        <article>
+          <header><h2>Haircut</h2></header>
+          <dl>
+            <dt>Date</dt>
+            <dd><time datetime="2026-12-15">December 15, 2026</time></dd>
+            <dt>Time</dt>
+            <dd>10:30 AM</dd>
+            <dt>Price</dt>
+            <dd>$30</dd>
+            <dt>Status</dt>
+            <dd>Confirmed</dd>
+          </dl>
+        </article>
+
+        <article>
+          <header><h2>Hair Styling</h2></header>
+          <dl>
+            <dt>Date</dt>
+            <dd><time datetime="2026-12-20">December 20, 2026</time></dd>
+            <dt>Time</dt>
+            <dd>1:00 PM</dd>
+            <dt>Price</dt>
+            <dd>$45</dd>
+            <dt>Status</dt>
+            <dd>Pending</dd>
+          </dl>
+        </article>
+      </section>
+
+      <p><a href="services.html" role="button">Book Another Appointment</a></p>
+
+      <aside aria-label="Demonstration notice">
+        <p><strong>Static demonstration:</strong> These sample appointments are not real bookings, and no booking information is saved.</p>
+      </aside>
+    </main>
+
+    <footer class="container">
+      <small>Nexa Salon - Appointment Booking Prototype</small>
+    </footer>
+  </body>
+</html>
