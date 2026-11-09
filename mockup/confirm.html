@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Review and Confirm Appointment | Nexa Salon</title>
+    <meta name="description" content="Review a sample Nexa Salon appointment in this static booking demonstration.">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    >
+  </head>
+  <body>
+    <header class="container">
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="services.html"><strong>Nexa Salon</strong></a></li>
+        </ul>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="appointments.html">My Appointments</a></li>
+          <li><a href="staff-calendar.html">Staff Calendar</a></li>
+          <li><a href="services-admin.html">Services Admin</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Review and Confirm Appointment</h1>
+
+      <article aria-labelledby="appointment-summary-heading">
+        <header><h2 id="appointment-summary-heading">Appointment summary</h2></header>
+        <dl>
+          <dt>Service</dt>
+          <dd>Haircut</dd>
+          <dt>Price</dt>
+          <dd>$30</dd>
+          <dt>Duration</dt>
+          <dd>30 minutes</dd>
+          <dt>Date</dt>
+          <dd><time datetime="2026-12-15">December 15, 2026</time></dd>
+          <dt>Time</dt>
+          <dd>10:30 AM</dd>
+        </dl>
+      </article>
+
+      <section aria-labelledby="client-details-heading">
+        <h2 id="client-details-heading">Client details</h2>
+        <label for="client-name">Client Name</label>
+        <input type="text" id="client-name" name="client-name" autocomplete="name" placeholder="Jordan Lee">
+
+        <label for="email-address">Email Address</label>
+        <input type="email" id="email-address" name="email-address" autocomplete="email" placeholder="jordan@example.com">
+
+        <label for="phone-number">Phone Number</label>
+        <input type="tel" id="phone-number" name="phone-number" autocomplete="tel" placeholder="(555) 010-1234">
+      </section>
+
+      <aside aria-label="Demonstration notice">
+        <p><strong>Static demonstration:</strong> No appointment will actually be saved.</p>
+      </aside>
+
+      <nav aria-label="Appointment steps">
+        <ul>
+          <li><a href="datetime.html">Back to Date and Time</a></li>
+        </ul>
+        <ul>
+          <li><a href="appointments.html" role="button">Confirm Booking</a></li>
+        </ul>
+      </nav>
+    </main>
+
+    <footer class="container">
+      <small>Nexa Salon - Appointment Booking Prototype</small>
+    </footer>
+  </body>
+</html>
