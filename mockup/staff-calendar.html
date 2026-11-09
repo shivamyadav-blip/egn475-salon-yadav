@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Staff Calendar | Nexa Salon</title>
+    <meta name="description" content="View a sample staff appointment schedule for Nexa Salon.">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    >
+  </head>
+  <body>
+    <header class="container">
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="services.html"><strong>Nexa Salon</strong></a></li>
+        </ul>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="appointments.html">My Appointments</a></li>
+          <li><a href="staff-calendar.html" aria-current="page">Staff Calendar</a></li>
+          <li><a href="services-admin.html">Services Admin</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Staff Calendar</h1>
+
+      <label for="calendar-date">Calendar date</label>
+      <input type="date" id="calendar-date" name="calendar-date" value="2026-12-15">
+
+      <section aria-label="Staff appointment schedule">
+        <div class="overflow-auto">
+          <table>
+            <caption>Sample appointments for December 15, 2026</caption>
+            <thead>
+              <tr>
+                <th scope="col">Time</th>
+                <th scope="col">Client</th>
+                <th scope="col">Service</th>
+                <th scope="col">Staff Member</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">9:00 AM</th>
+                <td>Emma Wilson</td>
+                <td>Hair Coloring</td>
+                <td>Sophia</td>
+                <td>Confirmed</td>
+              </tr>
+              <tr>
+                <th scope="row">10:30 AM</th>
+                <td>Jordan Lee</td>
+                <td>Haircut</td>
+                <td>Alex</td>
+                <td>Confirmed</td>
+              </tr>
+              <tr>
+                <th scope="row">1:00 PM</th>
+                <td>Olivia Brown</td>
+                <td>Hair Styling</td>
+                <td>Sophia</td>
+                <td>Pending</td>
+              </tr>
+              <tr>
+                <th scope="row">3:00 PM</th>
+                <td>Michael Davis</td>
+                <td>Haircut</td>
+                <td>Alex</td>
+                <td>Confirmed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside aria-label="Sample data notice">
+        <p><strong>Sample data:</strong> These appointments are illustrative only. The calendar does not update automatically.</p>
+      </aside>
+    </main>
+
+    <footer class="container">
+      <small>Nexa Salon - Appointment Booking Prototype</small>
+    </footer>
+  </body>
+</html>
