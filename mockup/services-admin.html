@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Services Admin | Nexa Salon</title>
+    <meta name="description" content="View sample salon service administration details for Nexa Salon.">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    >
+  </head>
+  <body>
+    <header class="container">
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="services.html"><strong>Nexa Salon</strong></a></li>
+        </ul>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="appointments.html">My Appointments</a></li>
+          <li><a href="staff-calendar.html">Staff Calendar</a></li>
+          <li><a href="services-admin.html" aria-current="page">Services Admin</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Services Admin</h1>
+
+      <section aria-labelledby="manage-services-heading">
+        <h2 id="manage-services-heading">Manage Salon Services</h2>
+        <div class="overflow-auto">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Service Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Haircut</th>
+                <td>$30</td>
+                <td>30 minutes</td>
+                <td>Active</td>
+                <td><button type="button" class="secondary">Edit</button></td>
+              </tr>
+              <tr>
+                <th scope="row">Hair Coloring</th>
+                <td>$80</td>
+                <td>90 minutes</td>
+                <td>Active</td>
+                <td><button type="button" class="secondary">Edit</button></td>
+              </tr>
+              <tr>
+                <th scope="row">Hair Styling</th>
+                <td>$45</td>
+                <td>45 minutes</td>
+                <td>Active</td>
+                <td><button type="button" class="secondary">Edit</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="add-service-heading">
+        <h2 id="add-service-heading">Add New Service</h2>
+        <form>
+          <label for="service-name">Service Name</label>
+          <input type="text" id="service-name" name="service-name" placeholder="e.g., Blowout">
+
+          <label for="service-price">Price</label>
+          <input type="number" id="service-price" name="service-price" min="0" step="0.01" placeholder="e.g., 55.00">
+
+          <label for="service-duration">Duration</label>
+          <input type="number" id="service-duration" name="service-duration" min="1" step="1" placeholder="Minutes, e.g., 45">
+
+          <label for="service-status">Status</label>
+          <select id="service-status" name="service-status">
+            <option value="active" selected>Active</option>
+            <option value="inactive">Inactive</option>
+          </select>
+
+          <button type="button">Add Service</button>
+        </form>
+      </section>
+
+      <aside aria-label="Sample data notice">
+        <p><strong>Sample data:</strong> All service information is illustrative only. Edits and new services are not saved.</p>
+      </aside>
+    </main>
+
+    <footer class="container">
+      <small>Nexa Salon - Appointment Booking Prototype</small>
+    </footer>
+  </body>
+</html>
