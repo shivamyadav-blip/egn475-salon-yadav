@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Services | Nexa Salon{% endblock %}
+{% block description %}Explore haircut, coloring, and styling services at Nexa Salon.{% endblock %}
+
+{% block content %}
+  <h1>Our Salon Services</h1>
+  <p>Find your next look with our salon's most-loved services.</p>
+
+  <section aria-label="Available salon services">
+    <div class="grid">
+      {% for service in services %}
+        <article>
+          <header>
+            <h2>{{ service.name }}</h2>
+            <p>{{ service.category }}</p>
+          </header>
+          <p>
+            <strong>${{ "%.2f"|format(service.price_cents / 100) }}</strong>
+            <span aria-label="Duration">· {{ service.duration_minutes }} minutes</span>
+          </p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}
