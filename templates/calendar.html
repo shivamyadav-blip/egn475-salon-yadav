@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Staff Calendar | Nexa Salon{% endblock %}
+{% block description %}View the sample staff appointment schedule for Nexa Salon.{% endblock %}
+
+{% block content %}
+  <h1>Staff Calendar</h1>
+
+  <section aria-label="Staff appointment schedule">
+    <div class="overflow-auto">
+      <table>
+        <caption>Sample staff appointments</caption>
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Client</th>
+            <th scope="col">Service</th>
+            <th scope="col">Stylist</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for appointment in appointments %}
+            <tr>
+              <td>{{ appointment.date }}</td>
+              <th scope="row">{{ appointment.time }}</th>
+              <td>{{ appointment.client }}</td>
+              <td>{{ appointment.service }}</td>
+              <td>{{ appointment.stylist }}</td>
+              <td>
+                {% if appointment.status == "Pending" %}
+                  <mark>Pending</mark>
+                {% else %}
+                  <strong>Confirmed</strong>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <aside aria-label="Sample data notice">
+    <p><strong>Sample data:</strong> These appointments are illustrative only. The calendar does not update automatically.</p>
+  </aside>
+{% endblock %}

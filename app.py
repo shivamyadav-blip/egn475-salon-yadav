@@ -48,6 +48,33 @@ SAMPLE_SERVICES = [
     },
 ]
 
+SAMPLE_APPOINTMENTS = [
+    {
+        "date": "2026-12-15",
+        "time": "9:00 AM",
+        "client": "Emma Wilson",
+        "service": "Hair Coloring",
+        "stylist": "Sophia",
+        "status": "Confirmed",
+    },
+    {
+        "date": "2026-12-15",
+        "time": "10:30 AM",
+        "client": "Jordan Lee",
+        "service": "Haircut",
+        "stylist": "Alex",
+        "status": "Confirmed",
+    },
+    {
+        "date": "2026-12-15",
+        "time": "1:00 PM",
+        "client": "Olivia Brown",
+        "service": "Hair Styling",
+        "stylist": "Sophia",
+        "status": "Pending",
+    },
+]
+
 
 @app.context_processor
 def inject_registered_endpoints():
@@ -78,6 +105,11 @@ def service_detail(service_id):
     if service is None:
         abort(404)
     return render_template("service_detail.html", service=service)
+
+
+@app.route("/calendar")
+def calendar():
+    return render_template("calendar.html", appointments=SAMPLE_APPOINTMENTS)
 
 
 if __name__ == "__main__":
