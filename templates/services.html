@@ -3,12 +3,26 @@
 {% block title %}Services | Nexa Salon{% endblock %}
 {% block description %}Explore haircut, coloring, and styling services at Nexa Salon.{% endblock %}
 
+{% block styles %}
+  <style>
+    #service-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (max-width: 768px) {
+      #service-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+{% endblock %}
+
 {% block content %}
   <h1>Our Salon Services</h1>
   <p>Find your next look with our salon's most-loved services.</p>
 
   <section aria-label="Available salon services">
-    <div class="grid">
+    <div class="grid" id="service-grid">
       {% for service in services %}
         <article>
           <header>
@@ -19,6 +33,9 @@
             <strong>${{ "%.2f"|format(service.price_cents / 100) }}</strong>
             <span aria-label="Duration">· {{ service.duration_minutes }} minutes</span>
           </p>
+          <footer>
+            <a href="{{ url_for('service_detail', service_id=service.id) }}" role="button">View Details</a>
+          </footer>
         </article>
       {% endfor %}
     </div>

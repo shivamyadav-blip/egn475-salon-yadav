@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{ service.name }} | Nexa Salon{% endblock %}
+{% block description %}View details for the {{ service.name }} service at Nexa Salon.{% endblock %}
+
+{% block content %}
+  <h1>{{ service.name }}</h1>
+  <dl>
+    <dt>Category</dt>
+    <dd>{{ service.category }}</dd>
+    <dt>Duration</dt>
+    <dd>{{ service.duration_minutes }} minutes</dd>
+    <dt>Price</dt>
+    <dd>${{ "%.2f"|format(service.price_cents / 100) }}</dd>
+  </dl>
+  <p><a href="{{ url_for('services') }}">Back to Services</a></p>
+{% endblock %}
