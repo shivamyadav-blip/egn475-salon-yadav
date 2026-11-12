@@ -1,25 +1,17 @@
 
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route("/")
-def home():
-    return """
-    <h1>Salon Management System</h1>
-    <h2>Welcome to Yadav Salon</h2>
-    <p>Professional Salon Booking and Management</p>
-    <p>Developed by Shivam Birat Yadav</p>
-    <a href="/about">About Our Salon</a>
-    """
 
-@app.route("/about")
-def about():
-    return """
-    <h1>About Yadav Salon</h1>
-    <p>Our salon provides professional beauty and grooming services.</p>
-    <a href="/">Back to Home</a>
-    """
+@app.context_processor
+def inject_registered_endpoints():
+    return {"registered_endpoints": set(app.view_functions)}
+
+
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

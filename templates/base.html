@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Nexa Salon{% endblock %}</title>
+    <meta
+      name="description"
+      content="{% block description %}Nexa Salon - Appointment Booking Prototype.{% endblock %}"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    >
+  </head>
+  <body>
+    <header class="container">
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="{{ url_for('index') }}"><strong>Nexa Salon</strong></a></li>
+        </ul>
+        <ul>
+          {% for endpoint, label in [
+            ("services", "Services"),
+            ("book", "Book"),
+            ("calendar", "Staff Calendar"),
+            ("appointments", "My Appointments")
+          ] %}
+            <li>
+              {% if endpoint in registered_endpoints %}
+                <a href="{{ url_for(endpoint) }}">{{ label }}</a>
+              {% else %}
+                <span aria-disabled="true">{{ label }}</span>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="container">
+      <small>Nexa Salon - Appointment Booking Prototype</small>
+    </footer>
+  </body>
+</html>

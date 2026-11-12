@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Nexa Salon{% endblock %}
+{% block description %}Welcome to Nexa Salon, your destination for professional salon services and appointment booking.{% endblock %}
+
+{% block content %}
+  <section>
+    <h1>Welcome to Nexa Salon</h1>
+    <p>Find your next look with our salon's most-loved services.</p>
+    <p>Enjoy professional hair care and a welcoming experience tailored to your style.</p>
+    {% if "services" in registered_endpoints %}
+      <a href="{{ url_for('services') }}" role="button">Explore Our Services</a>
+    {% endif %}
+  </section>
+{% endblock %}
