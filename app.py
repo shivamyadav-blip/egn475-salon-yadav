@@ -59,6 +59,11 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/book")
+def book():
+    return render_template("book.html", services=SAMPLE_SERVICES)
+
+
 @app.route("/services")
 def services():
     return render_template("services.html", services=SAMPLE_SERVICES)

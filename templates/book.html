@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Book an Appointment | Nexa Salon{% endblock %}
+{% block description %}Choose a service, stylist, date, and time for your Nexa Salon appointment.{% endblock %}
+
+{% block content %}
+  <h1>Book an Appointment</h1>
+  <p>Select your service and appointment details, then provide your contact information.</p>
+
+  <form>
+    <label for="service">Service</label>
+    <select id="service" name="service">
+      {% for service in services %}
+        <option value="{{ service.id }}">{{ service.name }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="stylist">Stylist</label>
+    <select id="stylist" name="stylist">
+      <option value="">Choose a stylist</option>
+      <option value="alex">Alex</option>
+      <option value="sophia">Sophia</option>
+    </select>
+
+    <label for="appointment-date">Date</label>
+    <input type="date" id="appointment-date" name="appointment-date">
+
+    <label for="appointment-time">Time</label>
+    <select id="appointment-time" name="appointment-time">
+      <option value="">Choose a time</option>
+      <option value="09:00">9:00 AM</option>
+      <option value="10:30">10:30 AM</option>
+      <option value="13:00">1:00 PM</option>
+      <option value="15:00">3:00 PM</option>
+    </select>
+
+    <label for="client-name">Client name</label>
+    <input type="text" id="client-name" name="client-name" autocomplete="name" placeholder="Jordan Lee">
+
+    <label for="email-address">Email</label>
+    <input type="email" id="email-address" name="email-address" autocomplete="email" placeholder="jordan@example.com">
+
+    <label for="phone-number">Phone</label>
+    <input type="tel" id="phone-number" name="phone-number" autocomplete="tel" placeholder="(555) 010-1234">
+
+    <button type="submit" disabled>Submit Booking</button>
+  </form>
+
+  <aside aria-label="Booking demonstration notice">
+    <p><strong>Display only:</strong> Appointment details are not saved. Saving will be added in Week 4.</p>
+  </aside>
+{% endblock %}
