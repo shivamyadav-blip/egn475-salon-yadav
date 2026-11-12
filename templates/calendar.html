@@ -31,8 +31,10 @@
               <td>
                 {% if appointment.status == "Pending" %}
                   <mark>Pending</mark>
-                {% else %}
+                {% elif appointment.status == "Confirmed" %}
                   <strong>Confirmed</strong>
+                {% else %}
+                  {{ appointment.status }}
                 {% endif %}
               </td>
             </tr>
