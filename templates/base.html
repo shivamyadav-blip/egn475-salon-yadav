@@ -28,11 +28,7 @@
             ("appointments", "My Appointments")
           ] %}
             <li>
-              {% if endpoint in registered_endpoints %}
-                <a href="{{ url_for(endpoint) }}"{% if request.endpoint == endpoint %} aria-current="page"{% endif %}>{{ label }}</a>
-              {% else %}
-                <span aria-disabled="true">{{ label }}</span>
-              {% endif %}
+              <a href="{{ url_for(endpoint) }}"{% if request.endpoint == endpoint %} aria-current="page"{% endif %}>{{ label }}</a>
             </li>
           {% endfor %}
         </ul>

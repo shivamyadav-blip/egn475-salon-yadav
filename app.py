@@ -82,11 +82,6 @@ SAMPLE_APPOINTMENTS = [
 ]
 
 
-@app.context_processor
-def inject_registered_endpoints():
-    return {"registered_endpoints": set(app.view_functions)}
-
-
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -109,7 +104,7 @@ def service_detail(service_id):
         None,
     )
     if service is None:
-        abort(404)
+        abort(404, description="The requested salon service was not found.")
     return render_template("service_detail.html", service=service)
 
 

@@ -37,6 +37,8 @@
             <a href="{{ url_for('service_detail', service_id=service.id) }}" role="button">View Details</a>
           </footer>
         </article>
+      {% else %}
+        <p>No services are available right now. Please check back later.</p>
       {% endfor %}
     </div>
   </section>
